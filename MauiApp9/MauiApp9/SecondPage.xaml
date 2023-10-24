@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp9.SecondPage"
+             Title="SecondPage"
+             BackgroundImageSource="fon.jpg">
+    <VerticalStackLayout>
+        <Label 
+            Text="Вторая страница"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" Margin="20"/>
+        <Image Source="cat.png"
+               HeightRequest="100"
+               WidthRequest="100"/>
+
+        <Entry IsPassword="True"
+               Placeholder="Это пароль"
+               HorizontalTextAlignment="End"
+               WidthRequest="200"/>
+        <Editor WidthRequest="200"
+                Text="Начало текста"
+                Placeholder="Введите текст"
+                HeightRequest="200"/> 
+
+       
+    </VerticalStackLayout>
+</ContentPage>
