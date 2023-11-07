@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp9.SecondPage"
              Title="SecondPage"
-             BackgroundImageSource="fon.jpg">
+             BackgroundColor="Beige">
+    <ScrollView>
     <VerticalStackLayout>
         <Label 
             Text="Вторая страница"
@@ -13,15 +14,27 @@
                HeightRequest="100"
                WidthRequest="100"/>
 
-        <Entry IsPassword="True"
+        <Entry x:Name="txtName"
+            Placeholder="Введите имя"
+            HorizontalTextAlignment="Start"
+            WidthRequest="200"/>
+
+        <Entry x:Name="txtPass" 
+               IsPassword="True"
                Placeholder="Это пароль"
                HorizontalTextAlignment="End"
                WidthRequest="200"/>
+        
         <Editor WidthRequest="200"
                 Text="Начало текста"
                 Placeholder="Введите текст"
-                HeightRequest="200"/> 
+                HeightRequest="200"/>
+        
+        <Button Text="Отправить"
+                WidthRequest="200" 
+                Clicked="Button_Clicked"/>
 
-       
+
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

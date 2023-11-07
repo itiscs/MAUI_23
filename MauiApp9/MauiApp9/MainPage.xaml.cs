@@ -13,15 +13,17 @@ namespace MauiApp9
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Random r = new Random();
+            Shell.Current.GoToAsync("second");
 
-            Ellipse el = new Ellipse();
-            el.WidthRequest = 150;
-            el.HeightRequest = 150;
-            el.Fill = Microsoft.Maui.Graphics.Color.
-                FromRgb(r.Next(255), r.Next(255), r.Next(255));
+            //Random r = new Random();
 
-            stk.Children.Add(el);
+            //Ellipse el = new Ellipse();
+            //el.WidthRequest = 150;
+            //el.HeightRequest = 150;
+            //el.Fill = Microsoft.Maui.Graphics.Color.
+            //    FromRgb(r.Next(255), r.Next(255), r.Next(255));
+
+            //stk.Children.Add(el);
             
         }
     }

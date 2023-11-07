@@ -17,7 +17,7 @@
             </Grid.ColumnDefinitions>
 
             
-            <Button Text="Добавить" 
+            <Button Text="Вторая страница" 
                     WidthRequest="300" 
                     HeightRequest="50"
                     BackgroundColor="Chocolate"

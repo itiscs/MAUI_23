@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp9.ItemsPage"
+             Title="ItemsPage">
+    <VerticalStackLayout>
+        <Label x:Name="txtHello" 
+            Text="Привет!"
+            HorizontalOptions="Center" />
+        <Label x:Name="txtToday" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Список товаров"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

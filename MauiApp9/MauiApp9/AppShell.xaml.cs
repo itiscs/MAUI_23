@@ -5,6 +5,10 @@
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute("mainpage", typeof(MainPage));
+            Routing.RegisterRoute("second", typeof(SecondPage));
+            Routing.RegisterRoute("items", typeof(ItemsPage));
+
         }
     }
 }
