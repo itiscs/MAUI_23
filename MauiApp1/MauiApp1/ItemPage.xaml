@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.ItemPage"
+             Title="ItemPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Страница пользователя"
+            FontSize="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Image Source="{Binding Image}" Margin="10" 
+            HeightRequest="200" WidthRequest="200" />
+            <StackLayout Margin="10">
+                <Editor Text="{Binding Name}" WidthRequest="200" FontSize="26" />
+                <Editor Text="{Binding Age}" WidthRequest="70" FontSize="26" />
+            </StackLayout>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

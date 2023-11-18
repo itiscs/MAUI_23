@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Список пользователей!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <CollectionView x:Name="lstUsers"  HorizontalOptions="Center"
+                            SelectionChanged="lstUsers_SelectionChanged"
+                            SelectionMode="Single"
+                            >
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Image}" Margin="10" 
+                                           HeightRequest="100" WidthRequest="100" />
+                                    <StackLayout Margin="10">   
+                                        <Label Text="{Binding Name}" FontSize="20" />
+                                        <Label Text="{Binding Age}" FontSize="20" />
+                                        <Label Text="{Binding Id}" FontSize="14" />
+                                    </StackLayout>
+                                </StackLayout>
+                        </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
