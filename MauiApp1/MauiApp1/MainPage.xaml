@@ -15,6 +15,10 @@
                 FontSize="32"
                 HorizontalOptions="Center" />
 
+            <Button x:Name="addPerson" 
+                    Text="Добавить"
+                    Clicked="addPerson_Clicked"/>
+            
             <CollectionView x:Name="lstUsers"  HorizontalOptions="Center"
                             SelectionChanged="lstUsers_SelectionChanged"
                             SelectionMode="Single"
@@ -22,8 +26,8 @@
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="2" />
                 </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
+                    <CollectionView.ItemTemplate>
+                         <DataTemplate>
                                 <StackLayout Orientation="Horizontal">
                                     <Image Source="{Binding Image}" Margin="10" 
                                            HeightRequest="100" WidthRequest="100" />

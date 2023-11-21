@@ -14,9 +14,31 @@
             <Image Source="{Binding Image}" Margin="10" 
             HeightRequest="200" WidthRequest="200" />
             <StackLayout Margin="10">
-                <Editor Text="{Binding Name}" WidthRequest="200" FontSize="26" />
-                <Editor Text="{Binding Age}" WidthRequest="70" FontSize="26" />
-            </StackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Имя" FontSize="26"/>
+                    <Editor Text="{Binding Name}" WidthRequest="200" FontSize="26" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Возраст" FontSize="26"/>
+                    <Editor Text="{Binding Age}" WidthRequest="70" FontSize="26" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Изображение" FontSize="26"/>
+                    <Editor Text="{Binding Image}" WidthRequest="200" FontSize="26" />
+                </HorizontalStackLayout>
+            </StackLayout>            
         </StackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="Сохранить" 
+                    x:Name="btnSave"
+                    WidthRequest="200"
+                    Clicked="btnSave_Clicked"/>
+            <Button Text="Удалить" 
+                    Margin="20,0,0,0"
+                    x:Name="btnDel"
+                    WidthRequest="200"
+                    BackgroundColor="OrangeRed"
+                    Clicked="btnDel_Clicked"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

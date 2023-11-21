@@ -4,25 +4,37 @@ namespace MauiApp1
 {
     public partial class MainPage : ContentPage
     {
+        PersonsDatabase _db;
      
-        public MainPage()
+        public MainPage(PersonsDatabase db)
         {
             InitializeComponent();
-            lstUsers.ItemsSource = Person.GetPeoples();
+            _db = db;
+            FillCollection();
         }
 
-        private void lstUsers_ItemTapped(object sender, ItemTappedEventArgs e)
+        protected override void OnAppearing()
         {
-            var p = e.Item as Person;
-            Shell.Current.GoToAsync($"item?id={p.Id}");
-
+            FillCollection();
         }
+
+        private void FillCollection()
+        {
+            lstUsers.ItemsSource = _db.GetPersons();
+        }
+
+
 
         private void lstUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var p = e.CurrentSelection[0] as Person;
             Shell.Current.GoToAsync($"item?id={p.Id}");
 
+        }
+
+        private void addPerson_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync($"item");
         }
     }
 }

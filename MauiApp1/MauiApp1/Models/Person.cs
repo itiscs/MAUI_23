@@ -1,13 +1,17 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MauiApp1.Models
 {
+    [Table("Persons")]
     public class Person
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
@@ -23,8 +27,8 @@ namespace MauiApp1.Models
             {
                 Id=1,
                 Name="Иван",
-            Image="user.png",
-            Age = 20});
+                Image="user.png",
+                Age = 20});
             lst.Add(new Person()
             {
                 Id = 2,
